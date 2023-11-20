@@ -84,7 +84,7 @@ def serve_any_other_file(path):
 @app.route('/api/send_mail', methods=['GET'])
 def send_mail():
     msg = Message(subject="Test mail", sender='josedcaro0207@gmail.com', recipients=['josedcaro0207@gmail.com'])
-    msg.body = "Correo enviado satisfactoriamente"
+    msg.html = "<h3>Correo enviado satisfactoriamente y en un nuevo commit</h3>"
     mail.send(msg)
     return jsonify({"msg": "mail enviado"}), 200
 
