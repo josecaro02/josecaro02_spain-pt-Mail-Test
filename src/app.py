@@ -40,8 +40,8 @@ app.config.update(dict(
     MAIL_PORT = 587,
     MAIL_USE_TLS = True,
     MAIL_USE_SSL = False,
-    MAIL_USERNAME = 'jose.4geeks@gmail.com',
-    MAIL_PASSWORD = 'sgiqzinwqvtjwtnw',
+    MAIL_USERNAME = 'jose.4geeks@gmail.co',
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD"),
 ))
 
                                                                                         
