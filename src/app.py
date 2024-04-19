@@ -13,6 +13,7 @@ from api.commands import setup_commands
 from flask_mail import Mail, Message
 
 
+
 # from models import Person
 
 ENV = "development" if os.getenv("FLASK_DEBUG") == "1" else "production"
@@ -39,10 +40,11 @@ app.config.update(dict(
     MAIL_PORT = 587,
     MAIL_USE_TLS = True,
     MAIL_USE_SSL = False,
-    MAIL_USERNAME = 'josedcaro0207@gmail.com',
-    MAIL_PASSWORD = 'qtphlnmehueivsdy',
+    MAIL_USERNAME = 'jose.4geeks@gmail.com',
+    MAIL_PASSWORD = 'sgiqzinwqvtjwtnw',
 ))
 
+                                                                                        
 mail = Mail(app)
 
 # add the admin
@@ -83,8 +85,8 @@ def serve_any_other_file(path):
 
 @app.route('/api/send_mail', methods=['GET'])
 def send_mail():
-    msg = Message(subject="Test mail", sender='josedcaro0207@gmail.com', recipients=['josedcaro0207@gmail.com'])
-    msg.html = "<h3>Correo enviado satisfactoriamente y en un nuevo commit</h3>"
+    msg = Message(subject="Test mail", sender='jose.4geeks@gmail.com', recipients=['jose.4geeks@gmail.com'])
+    #msg.html = "<h3>Correo enviado satisfactoriamente y en un nuevo commit</h3>"
     mail.send(msg)
     return jsonify({"msg": "mail enviado"}), 200
 
